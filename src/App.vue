@@ -1,16 +1,18 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+  <Counter title="Entraron" /> <!--se define en el template-->
+  <Counter title="Salieron" /> 
+</template> 
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Counter from './components/Counter.vue' //se importa el componente creado
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: { // se define en los components
+    Counter
+   }
+  
 }
 </script>
 
