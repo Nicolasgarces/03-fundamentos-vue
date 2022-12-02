@@ -1,11 +1,11 @@
 import Co from 'module';
 <template>
-  <h2>{{title || 'Counter'}}</h2>
-  <p>{{ counter }}<sup>2</sup> =  {{( counter * counter )}}</p> 
+  <h2>{{customTitle}}</h2> 
+  <p>{{ counter }}<sup>2</sup> =  {{ squareCounter }}</p> 
 
     <div>
-        <button v-on:click="increase">+1</button>
-        <button v-on:click="decrease">-1</button>
+        <button @click="increase">+1</button> <!-- v-on: se puede sustituir por un @ para escuchar un evento-->
+        <button @click="decrease">-1</button>
     </div>
 </template>
 
@@ -36,11 +36,11 @@ export default {
     computed:{ // las propiedades computadas se guardan en el cache
         squareCounter (){
             console.log('computed squareCounter')
-            return this.counter * this.counter 
+            return this.counter * this.counter // las propiedades computadas tienen que retornar algo siempre
             
         },
         customTitle(){
-             
+             return this.title || 'Counter'
         }
         
     }

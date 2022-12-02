@@ -1,7 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <Counter title="Entraron" /> <!--se define en el template-->
-  <Counter title="Salieron" /> 
+  <Counter start="15"/> <!--se define en el template-->
 </template> 
 
 <script>
