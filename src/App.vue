@@ -1,6 +1,6 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <Counter start="15"/> <!--se define en el template-->
+  <Counter :start="100"/> <!--se define en el template// el v-bind se simplifica pot dos puntos : -->
 </template> 
 
 <script>

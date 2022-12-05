@@ -1,4 +1,3 @@
-import Co from 'module';
 <template>
   <h2>{{customTitle}}</h2> 
   <p>{{ counter }}<sup>2</sup> =  {{ squareCounter }}</p> 
@@ -10,12 +9,22 @@ import Co from 'module';
 </template>
 
 <script>
+
 export default {
-    props: ['title'], 
+    props: { //a las props se les debe definir el tipo de dato
+        title: String,
+        start: {
+            type: Number,
+            default: 100,
+            // required: true 
+            validator(value) { //recibe el value que se puso en el start
+                return value >= 0 
+            } 
+        }
+    }, 
     data() {
         return {
-           counter: 5 
-           
+           counter: this.start
         }
     },
     methods:{
@@ -56,8 +65,8 @@ button{
     color: white;
     cursor: pointer;
     margin : 0 5px;
-    padding: 5px 15px;
-    transition: 0.3s ease-in-out
+    /* padding: 5px 15px; */
+    /* transition: 0.3s ease-in-out */
 }
 
 button:hover {
