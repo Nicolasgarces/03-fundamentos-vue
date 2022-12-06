@@ -2,7 +2,7 @@
   <h2>{{customTitle}}</h2> 
   <p>{{ counter }}<sup>2</sup> =  {{ squareCounter }}</p> 
 
-    <div>
+    <div class="buttons-conta">
         <button @click="increase">+1</button> <!-- v-on: se puede sustituir por un @ para escuchar un evento-->
         <button @click="decrease">-1</button>
     </div>
