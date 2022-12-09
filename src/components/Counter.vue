@@ -1,6 +1,7 @@
 <template>
   <h2>{{customTitle}}</h2> 
   <p>{{ counter }}<sup>2</sup> =  {{ squareCounter }}</p> 
+  <p data-testid="counter">{{ counter }}</p> <!--`data-testid="counter"` le da una especie de id o clase para poder identificar mas rapido lo que vamos a testear -->
 
     <div class="buttons-conta">
         <button @click="increase">+1</button> <!-- v-on: se puede sustituir por un @ para escuchar un evento-->
