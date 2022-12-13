@@ -15,7 +15,7 @@ describe('Counter Component', () => {
 
     //     const wrapper = shallowMount( Counter ) 
 
-    //     expect( wrapper.html() ).toMatchSnapshot()
+    //     expect( wrapper.html() ).toMatchSnapshot() //aqui se le esta diciendo que le tome una foto a todo el componente evaluado 
 
 
     // })
