@@ -28,11 +28,18 @@ export default {
     methods:{
        async getAnswer(){
 
+          try {
             this.answer = 'Pensando...'
             const {answer, image} = await fetch('https://yesno.wtf/api').then( r => r.json() )
 
             this.answer = answer === 'yes' ? 'SI!' : 'NO!'
             this.img = image 
+
+          } catch (error) {
+            console.log('IndecisionComponent:', error)
+            this.answer = 'No se pudo cargar del API'
+            this.img    = null
+          }
         }
     },
     watch:{ //estArá pendiente de los cambios 
